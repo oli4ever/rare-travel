@@ -14,10 +14,14 @@
     <div class="container">
         <header class="header">
             <nav class="nav">
-                <img class="nav-img" src="Images/Group 40071.png" alt="">
-                <h3 class="nav-title">Rare <span class="travel">Travel</span></h3>
+                <div class="nav-container">
+                    <img class="nav-img" src="Images/Group 40071.png" alt="">
+                    <a href="#raretravel">
+                        <h3 class="nav-title">Rare <span class="travel">Travel</span></h3>
+                    </a>
+                </div>
                 <ul>
-                    <li class="home"><a href="#home">Home</a></li>
+                    <li class="home"><a href="#raretravel">Home</a></li>
                     <li class="packages"><a href="#packages">Packages</a></li>
                     <li class="testimonial"><a href="#testimonial">Testimonial</a></li>
                     <li class="blog"><a href="#blog">Blog</a></li>
@@ -27,65 +31,374 @@
             <div class="banner">
                 <h1 class="banner-title">Explore Your Travel</h1>
                 <p class="banner-description">Discover new destinations, cultures, adventure, relaxation, scenic views,
-                    hidden gems, <br> experiences, exciting journeys, and unforgettable memories worldwide.</p>
+                    hidden gems, experiences, exciting journeys, and unforgettable memories worldwide.</p>
                 <div class="find">
-                    <input type="text" placeholder="Where go" class="box">
-                    <select id="travel-time" name="travel-time" class="box">
-                        <option value="" disabled selected hidden>When</option>
-                        <option value="summer">Summer Adventures</option>
-                        <option value="weekend">Weekend Escapes</option>
-                        <option value="winter">Winter Getaways</option>
-                        <option value="last-minute">Last-Minute Trips</option>
-                        <option value="holiday">Holiday Breaks</option>
-                        <option value="spring">Springtime Journeys</option>
-                        <option value="autumn">Autumn Escapes</option>
-                        <option value="off-season">Off-Season Vacations</option>
-                        <option value="sunset">Sunset Travel</option>
-                        <option value="sunset">Sunrise Explorations</option>
-                        <option value="sunset">Winter Wonderland Trips</option>
-                        <option value="sunset">48-Hour City Tours</option>
-                        <option value="sunset">Beach Retreats in Summer</option>
-                        <option value="sunset">Evening Strolls Abroad</option>
-                        <option value="sunset">Long Weekend Retreats</option>
-                        <option value="sunset">Fall Foliage Escapes</option>
-                        <option value="sunset">Summer Beach Days</option>
-                        <option value="sunset">Early Morning Hikes</option>
-                    </select>
+                    <form class="travel-form">
+                        <input type="text" name="text" placeholder="Where go" class="box" required pattern="[A-Za-z\s]+"
+                            title="Please input a valid place name (letters only).">
+                        <select id="travel-time" name="travel-time" class="box" required>
+                            <option value="" disabled selected hidden>When</option>
+                            <option value="summer">Summer Adventures</option>
+                            <option value="weekend">Weekend Escapes</option>
+                            <option value="winter">Winter Getaways</option>
+                            <option value="last-minute">Last-Minute Trips</option>
+                            <option value="holiday">Holiday Breaks</option>
+                            <option value="spring">Springtime Journeys</option>
+                            <option value="autumn">Autumn Escapes</option>
+                            <option value="off-season">Off-Season Vacations</option>
+                            <option value="sunset">Sunset Travel</option>
+                            <option value="sunset">Sunrise Explorations</option>
+                            <option value="sunset">Winter Wonderland Trips</option>
+                            <option value="sunset">48-Hour City Tours</option>
+                            <option value="sunset">Beach Retreats in Summer</option>
+                            <option value="sunset">Evening Strolls Abroad</option>
+                            <option value="sunset">Long Weekend Retreats</option>
+                            <option value="sunset">Fall Foliage Escapes</option>
+                            <option value="sunset">Summer Beach Days</option>
+                            <option value="sunset">Early Morning Hikes</option>
+                        </select>
 
-                    <select id="travel-type" name="travel-type" class="box">
-                        <option value="" disabled selected hidden>Select Type</option>
-                        <option value="summer">Adventure Travel</option>
-                        <option value="weekend">Luxury Escapes</option>
-                        <option value="winter">Family Getaways</option>
-                        <option value="last-minute">Solo Adventures</option>
-                        <option value="holiday">Cultural Journeys</option>
-                        <option value="spring">Romantic Vacations</option>
-                        <option value="autumn">Beach Holidays</option>
-                        <option value="off-season">Wildlife Safaris</option>
-                        <option value="sunset">Road Trips</option>
-                        <option value="sunset">Wellness Retreats</option>
-                        <option value="sunset">City Breaks</option>
-                        <option value="sunset">Eco-Tourism</option>
-                        <option value="sunset">Mountain Expeditions</option>
-                        <option value="sunset">Cruise Voyages</option>
-                        <option value="sunset">Culinary Tours</option>
-                        <option value="sunset">Historical Tours</option>
-                        <option value="sunset">Nature Escapes</option>
-                        <option value="sunset">Skiing Holidays</option>
-                        <option value="sunset">Volunteer Travel</option>
-                        <option value="sunset">Off-the-Beaten-Path</option>
-                    </select>
-                    <a href="#find"><button class="box btn-primary"><img class="search" src="Images/search.png" alt=""><span class="find-text">Find Now</span></button></a>
+                        <select id="travel-type" name="travel-type" class="box" required>
+                            <option value="" disabled selected hidden>Select Type</option>
+                            <option value="summer">Adventure Travel</option>
+                            <option value="weekend">Luxury Escapes</option>
+                            <option value="winter">Family Getaways</option>
+                            <option value="last-minute">Solo Adventures</option>
+                            <option value="holiday">Cultural Journeys</option>
+                            <option value="spring">Romantic Vacations</option>
+                            <option value="autumn">Beach Holidays</option>
+                            <option value="off-season">Wildlife Safaris</option>
+                            <option value="sunset">Road Trips</option>
+                            <option value="sunset">Wellness Retreats</option>
+                            <option value="sunset">City Breaks</option>
+                            <option value="sunset">Eco-Tourism</option>
+                            <option value="sunset">Mountain Expeditions</option>
+                            <option value="sunset">Cruise Voyages</option>
+                            <option value="sunset">Culinary Tours</option>
+                            <option value="sunset">Historical Tours</option>
+                            <option value="sunset">Nature Escapes</option>
+                            <option value="sunset">Skiing Holidays</option>
+                            <option value="sunset">Volunteer Travel</option>
+                            <option value="sunset">Off-the-Beaten-Path</option>
+                        </select>
+                        <a href="#find"><button class="btn-primary box"><img class="search" src="Images/search.png"
+                                    alt=""><span class="find-text">Find Now</span></button>
+                        </a>
+                    </form>
                 </div>
             </div>
         </header>
         <main>
+            <section class="popular">
+                <div class="popular-content">
+                    <h3 class="travel-title">Our Popular Tours</h3>
+                    <div class="travel-description">
+                        <p>Discover the world with our carefully curated tours, designed to provide unforgettable
+                            experiences in every destination.
+                        </p>
+                        <ul>
+                            <li>Explore ancient cities, historic landmarks, and rich traditions.</li>
+                            <li>From hiking to water sports, find thrilling activities.</li>
+                            <li>Enjoy serene beaches and peaceful resorts for ultimate relaxation.</li>
+                        </ul>
+                        <p class="popular-text">Each tour offers a unique blend of excitement and relaxation, ensuring
+                            travelers of all kinds find their perfect journey. Join us for the adventure of a lifetime,
+                            and create memories you'll cherish forever!
+                        </p>
+                    </div>
+                    <a href="#read"><button class="btn-primary"><span class="btn-text">Read More</span></button></a>
+                </div>
+                <div class="popular-image">
+                    <img src="Images/Rectangle 4.png" alt="">
+                </div>
+            </section>
+            <section class="destination">
+                <div class="destination-content">
+                    <h3 class="travel-title destination-title">Choose Your Destination</h3>
+                    <p class="travel-description destination-description">Choose your destination from an array of
+                        breathtaking
+                        locales, offering everything from scenic beaches to bustling cityscapes and tranquil mountains.
+                    </p>
+                </div>
+                <div class="destination-images">
+                    <div class="row">
+                        <div class="image-container">
+                            <img src="Images/Rectangle 5.png" alt="">
+                            <a href="#maldives">
+                                <div class="destination-text">Maldives</div>
+                            </a>
+                        </div>
+                        <div class="image-container">
+                            <img src="Images/Rectangle 8.png" alt="">
+                            <a href="#indonesia">
+                                <div class="destination-text">Indonesia</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="image-container">
+                            <img src="Images/Rectangle 6.png" alt="">
+                            <a href="#srilanka">
+                                <div class="destination-text">Srilanka</div>
+                            </a>
+                        </div>
 
+                        <div class="image-container">
+                            <img src="Images/Rectangle 7.png" alt="">
+                            <a href="#north-america">
+                                <div class="destination-text">North America</div>
+                            </a>
+                        </div>
+
+                        <div class="image-container">
+                            <img src="Images/Rectangle 9.png" alt="">
+                            <a href="#kashmir">
+                                <div class="destination-text">Kashmir</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="image-container">
+                            <img src="Images/Group 48.png" alt="">
+                            <a href="#santorini">
+                                <div class="destination-text santorini">Santorini</div>
+                            </a>
+                        </div>
+                        <div class="image-container">
+                            <img src="Images/Rectangle 10.png" alt="">
+                            <a href="#bandarban">
+                                <div class="destination-text">Bandarban</div>
+                            </a>
+                        </div>
+                    </div>
+            </section>
+            <section class="choose">
+                <div class="choose-content">
+                    <h3 class="travel-title choose-title">Why Choose Us</h3>
+                    <p class="travel-description choose-description">We offer tailored travel experiences, 24/7 customer
+                        support, exclusive deals, and an unwavering commitment to quality.</p>
+                </div>
+                <div class="card-container">
+                    <div class="card1">
+                        <img src="Images/Group 41.png" alt="">
+                        <h4 class="card-title">Handpicked Hotels</h4>
+                        <p class="description-text">Discover exclusive hotels chosen for their luxury, prime locations,
+                            and exceptional amenities, ensuring a personalized, unforgettable stay that meets the
+                            highest standards of comfort.</p>
+                    </div>
+                    <div class="card2">
+                        <img src="Images/Group 42.png" alt="">
+                        <h4 class="card-title">World Class Service</h4>
+                        <p class="description-text">Experience world-class service with attention to detail,
+                            personalized support, and professional hospitality that exceeds expectations, ensuring
+                            your trip is smooth, memorable, and stress-free.</p>
+                    </div>
+                    <div class="card3">
+                        <img src="Images/Group 43.png" alt="">
+                        <h4 class="card-title">Best Price Guarantee</h4>
+                        <p class="description-text">Enjoy the best price guarantee, offering competitive rates without
+                            <br> compromising quality. We ensure the best deals, saving you <br> money while delivering
+                            top value for your travels.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="deals-content">
+                    <h3 class="travel-title deals-title">Deals & Discounts</h3>
+                    <p class="travel-description deals-description">Unlock incredible savings with our exclusive Deals &
+                        Discounts. Enjoy limited-time offers on travel packages, hotels, and activities!</p>
+                </div>
+                <div class="deals-container">
+                    <div class="image-container">
+                        <img src="Images/Group 39.png" alt="">
+                        <div class="deals-card position1">
+                            <div class="info">
+                                <div class="duration">
+                                    <img src="Images/Group 44.png" alt="">
+                                    <p class="description-text"> 7 Day / 6 Night </p>
+                                </div>
+                                <div class="quantity">
+                                    <img src="Images/Group 45.png" alt="">
+                                    <p class="description-text"> Max : 10 </p>
+                                </div>
+                                <div class="location">
+                                    <img src="Images/Group 46.png" alt="">
+                                    <p class="description-text">Maldives</p>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Tour To Veligandu Island</h4>
+                            <p class="description-text deals-card-description">Experience a serene escape with
+                                crystal-clear waters, white
+                                sandy beaches, and luxurious overwater villas on Veligandu Island.
+                            </p>
+                            <div class="price"> Price: $1300-$1500 </div>
+                            <a href="#book"><button class="btn-primary"><span class="btn-text">Book
+                                        Now</span></button></a>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="Images/Group 40.png" alt="">
+                        <div class="deals-card position2">
+                            <div class="info">
+                                <div class="duration">
+                                    <img src="Images/Group 44.png" alt="">
+                                    <p class="description-text"> 7 Day / 6 Night </p>
+                                </div>
+                                <div class="quantity">
+                                    <img src="Images/Group 45.png" alt="">
+                                    <p class="description-text"> Max : 10 </p>
+                                </div>
+                                <div class="location">
+                                    <img src="Images/Group 46.png" alt="">
+                                    <p class="description-text">Greece</p>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Tour To Santorini</h4>
+                            <p class="description-text deals-card-description">Tour to Santorini offers breathtaking
+                                views of whitewashed
+                                buildings, crystal-clear waters, iconic sunsets, and rich ancient history.
+                            </p>
+                            <div class="price"> Price: $1200-$1400 </div>
+                            <a href="#book"><button class="btn-primary"><span class="btn-text">Book
+                                        Now</span></button></a>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img class="group-47" src="Images/Group 49.png" alt="">
+                        <div class="deals-card position1">
+                            <div class="info">
+                                <div class="duration">
+                                    <img src="Images/Group 44.png" alt="">
+                                    <p class="description-text"> 7 Day / 6 Night </p>
+                                </div>
+                                <div class="quantity">
+                                    <img src="Images/Group 45.png" alt="">
+                                    <p class="description-text"> Max : 10 </p>
+                                </div>
+                                <div class="location">
+                                    <img src="Images/Group 46.png" alt="">
+                                    <p class="description-text">Bangladesh</p>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Tour To Bandarban</h4>
+                            <p class="description-text deals-card-description">Discover the beauty of Bandarban with its
+                                lush green hills,
+                                hidden waterfalls, and rich indigenous culture in Bangladesh.
+                            </p>
+                            <div class="price"> Price: $1100-$1300 </div>
+                            <a href="#book"><button class="btn-primary"><span class="btn-text">Book
+                                        Now</span></button></a>
+                        </div>
+                    </div>
+                    <a href="#packages"><button class="btn-primary packages"><span class="btn-text">See All
+                                Packages</span></button></a>
+                </div>
+            </section>
+            <section class="place">
+                <div class="place-content">
+                    <h3 class="travel-title place-title">A Simple Perfect Place <br> To Get Lost</h3>
+                    <p class="description-text place-description">Discover a serene escape where nature meets
+                        tranquility,
+                        offering a perfect retreat from the everyday hustle.
+                    </p>
+                    <ul>
+                        <li>Immerse yourself in peaceful landscapes, breathtaking views, and quiet pathways that
+                            inspire reflection and relaxation.</li>
+                        <li>Explore hidden gems, from secluded spots to natural wonders, ensuring unforgettable
+                            moments away from the ordinary.</li>
+                    </ul>
+                    <a href="#see-more"><button class="btn-primary"><span class="btn-text">See More</span></button></a>
+                </div>
+                <div class="video-container">
+                    <div id="player"></div>
+                    <div class="place-text">Watch Our Mountain in <br> Bangladesh</div>
+                </div>
+            </section>
+            <section class="newsletter">
+                <div>
+                    <div class="newsletter-box">
+                        <div class="newsletter-content">
+                            <h3 class="card-title newsletter-title">Newsletter</h3>
+                            <p class="description-text newsletter-description">Get your daily dose of travel news &
+                                tips. Sign up
+                                today!</p>
+                            <hr>
+                            <form>
+                                <input type="text" name="name" placeholder="Enter your name" required
+                                    pattern="[A-Za-z\s]+" title="Name should only contain letters."> <br>
+                                <input type="email" name="email" placeholder="Enter your email" required />
+                                <a href="#subscribe"><button class="btn-primary"><span
+                                            class="btn-text">Subscribe</span></button></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="Images/Rectangle 12.png" alt="">
+                    <a href="https://travel.com" target="_blank"><button class="btn-primary btn-newsletter"><span
+                                class="travel-text">Travel.com</span> <br> <span class="save-text">Save up to
+                                70%</span></button></a>
+                </div>
+            </section>
         </main>
         <footer>
+            <div class="footer-content">
+                <div class="footer-container">
+                    <img class="nav-img" src="Images/Group 40071.png" alt="">
+                    <a href="#raretravel">
+                        <h3 class="nav-title footer-title">Rare <span class="travel">Travel</span></h3>
+                    </a>
+                </div>
+                <p class="description-text">Discover the world with Rare Travel — your gateway to unique
+                    destinations, unforgettable experiences, and personalized adventures crafted just for you.</p>
+                <div class="icon">
+                    <a href="https://x.com" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
 
+                </div>
+                <hr>
+                <div class="footer-text">
+                    2024, All Rights Reserved.
+                </div>
+            </div>
         </footer>
     </div>
+
+    <!-- Load the IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        // This function creates an <iframe> and YouTube player after the API code downloads.
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '391',
+                width: '695',
+                videoId: 'ePjDdvZQmag', // Your YouTube video ID
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // Function to hide overlay when the video starts playing
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                document.querySelector('.place-text').style.display = 'none'; // Hide the overlay
+            }
+        }
+    </script>
 </body>
 
 </html>
