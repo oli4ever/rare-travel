@@ -47,7 +47,7 @@ body {
 }
 
 .nav>ul {
-    display: flex;  
+    display: flex;
 }
 
 .nav li {
@@ -103,6 +103,7 @@ body {
     color: var(--orange-color);
 }
 
+/* banner styles */
 .banner {
     background-image: linear-gradient(180.00deg, rgba(19, 19, 24, 0.8), rgba(19, 19, 24, 0) 100%), url("../Images/Group\ 13.png");
     background-repeat: no-repeat;
@@ -156,7 +157,6 @@ body {
 .find a,
 .popular-content a,
 .deals-container a,
-.place-description a,
 .place-content a,
 .newsletter-box a,
 .footer-container a {
@@ -185,7 +185,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    padding: 12px 25px;
+    padding: 15px 40px;
     border: 0;
     cursor: pointer;
 }
@@ -207,6 +207,7 @@ body {
     font-family: var(--font-mulish);
     font-size: 1rem;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .travel-title {
@@ -228,7 +229,7 @@ body {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    gap: 50px; 
+    gap: 50px;
 }
 
 .popular-content {
@@ -271,9 +272,11 @@ body {
     color: rgb(153, 51, 51);
 }
 
-.destination-description, .choose-description, .deals-description {
-    text-align:center;
-    max-width: 60%;
+.destination-description,
+.choose-description,
+.deals-description {
+    text-align: center;
+    max-width: 50%;
     margin: 0 auto;
 }
 
@@ -366,8 +369,9 @@ body {
     width: 573px;
     height: 284px;
     border-radius: 16px;
-    padding: 30px 100px 30px 30px;
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    padding: 30px;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect size */
 }
 
 .card1 {
@@ -383,20 +387,19 @@ body {
 .card3 {
     border: 1px solid rgba(233, 68, 68, 0.2);
     background: rgba(233, 68, 68, 0.05);
-    grid-column: span 2; /* Make .card3 span across two columns */
+    grid-column: span 2;
+    /* Make .card3 span across two columns */
     justify-self: center;
-    width: 50%;
 }
 
 .card-container h4 {
     color: rgb(128, 0, 128);
+    margin-top: 15px;
 }
 
 .card-container p {
-    width: 118%;
     color: rgb(128, 0, 0);
-    line-height: 1.25rem;
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 .card2:hover {
@@ -427,8 +430,8 @@ body {
 
 .deals-card {
     box-sizing: border-box;
-    width:579px;
-    height:389px;
+    width: 579px;
+    height: 389px;
     border: 2px solid var(--white-color);
     border-radius: 16px;
     padding: 40px;
@@ -502,12 +505,13 @@ body {
     color: rgb(128, 0, 0);
 }
 
-.place-description, .newsletter-description {
+.place-description,
+.newsletter-description {
     max-width: 80%;
 }
 
 .place-content>ul {
-    max-width:95%;
+    max-width: 95%;
     color: var(--primary-color);
     font-family: var(--font-mulish);
     font-size: var(--font-size);
@@ -650,7 +654,7 @@ body {
     color: var(--white-color);
     font-family: var(--font-mulish);
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 800;
     white-space: nowrap;
     margin-top: -10px;
 }
@@ -730,7 +734,7 @@ footer {
 .footer-text {
     color: var(--primary-color);
     font-family: var(--font-inter);
-    font-size: 16px;
+    font-size: var(--font-size);
     font-weight: 300;
     margin-top: 50px;
 }
@@ -738,6 +742,12 @@ footer {
 /* responsive media queries */
 /* Styles for smartphones */
 @media screen and (max-width:600px) {
+
+    .container {
+        justify-items: left;
+        align-items:start;
+    }
+
     .header {
         padding: 0px;
     }
@@ -756,6 +766,67 @@ footer {
 
     .nav-title {
         font-size: 1.346rem;
+    }
+
+    /* Hide normal menu */
+    .nav-menu {
+        display: none;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 140px;
+    }
+
+    .hamburger span {
+        background-color: #333;
+        display: block;
+        height: 3px;
+        margin: 5px 0;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Show hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* When the menu is opened, the dropdown is visible */
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Adjust based on your header height */
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Make sure each menu item is vertically stacked */
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    /* Adjust styling for menu items in mobile */
+    .nav-menu li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 1rem;
     }
 
     .banner {
@@ -789,30 +860,351 @@ footer {
     .travel-form {
         display: flex;
         flex-direction: column;
-        gap:15px;
+        gap: 15px;
     }
 
     .popular {
         margin-top: 30px;
-        margin-left: -100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 20px;
     }
 
-    .travel-title {
+    .popular-content {
+        max-width: 300px;
+    }
+
+    .travel-title,
+    .card-title {
         font-size: 1.25rem;
     }
-    
-    .travel-description {
+
+    .travel-description,
+    .description-text {
         font-size: 0.875rem;
         line-height: 24px;
-        width: 20%;
     }
 
     .travel-description>ul {
-        margin-top: 30px;
         margin-left: -15px;
     }
+
+    .popular-text {
+        max-width: 100%;
+    }
+
+    .popular-image img {
+        width: 335px;
+        height: 342px;
+        border-radius: 16px;
+    }
+
+    .destination-content {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .destination-title {
+        margin-left: 65px;
+    }
+
+    .destination-description,
+    .choose-description,
+    .deals-description {
+        text-align: center;
+        max-width: 30%;
+        margin-left: 40px;
+    }
+
+    .destination-images {
+        margin-top: 20px;
+        justify-content: left;
+        margin-left: 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .destination-images img {
+        width: 335px;
+        height: 176px;
+    }
+
+    .destination-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    .choose {
+        margin-top: 30px;
+        padding: 10px 20px 50px;
+        box-sizing: border-box;
+    }
+
+    .choose-content {
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    .choose-title {
+        margin-left: 30px;
+    }
+
+    .choose-content p {
+        margin-left: -20px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 0px;
+        justify-content: left;
+        align-items: start;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        width: 335px;
+        height: 289px;
+        padding: 30px;
+    }
+
+    .card-container img {
+        margin-top: -10px;
+    }
+
+    .deals-content {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .deals-title {
+        text-align: left;
+        margin-left: 100px;
+    }
+
+    .deals-container {
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .deals-container img {
+        width: 335px;
+        height: 500px;
+        margin-left: 20px;
+    }
+
+    .deals-card {
+        width: 303px;
+        height: 297px;
+        padding: 20px;
+    }
+
+    .position1,
+    .position2 {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+    }
+
+    .image-container {
+        justify-self: left;
+    }
+
+    .image-container > img{
+        border-radius: 16px;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: -20px;
+        gap: 2px;
+    }
+
+    .info .duration {
+        grid-column: span 2;
+        margin-top: -20px;
+    }
+    
+    .info .quantity, 
+    .info .location {
+        grid-column: span 1; /* Two columns in the second row */
+        margin-top: -20px;
+    }
+
+    .info .location {
+        margin-left: -30px;
+    }
+
+    .deals-card h4 {
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    .duration,
+    .quantity,
+    .location {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .duration img,
+    .quantity img,
+    .location img {
+        width: 19px;
+        height: 21px;
+    }
+
+    .deals-card-description {
+       margin-top: 10px;
+        max-width: 100%;
+        line-height: 18px;
+    }
+
+    .price {
+        font-size: 1rem;
+        margin-top: -5px;
+        margin-bottom: 15px;
+    }
+
+    a[href="#book"] .btn-primary {
+        padding: 10px 20px;
+    }
+
+    .btn-text {
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+
+    a[href="#packages"] .btn-primary {
+        display: none;
+    }
+
+    .place {
+        margin-top: 30px;
+        margin-left: 20px;
+        flex-direction: column;
+    }
+
+    .place-content {
+        max-width: 300px;
+    }
+
+    .place-description {
+        max-width: 90%;
+    }
+    
+    .place-content>ul {
+        font-size: 0.875rem;
+        line-height: 24px;
+    }
+    
+    .video-container {
+        width: 335px;
+        height: 200px;
+        max-width: 400px;
+        flex-basis: 100%; 
+    }
+
+    .place-text {
+        top: 5%;
+        left: 15%;
+        font-size: 1.25rem;
+        
+    }
+
+    .newsletter {
+        margin-top: 30px;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .newsletter-box {
+        width: 335px;
+        height: 353px;
+        padding: 20px 20px 20px;
+    }
+
+    .newsletter-description {
+        margin-top: -10px;
+        max-width: 90%;
+    }
+
+    .newsletter-box hr,
+    .newsletter-box input[type="text"],
+    .newsletter-box input[type="email"],
+    .newsletter-box button {
+        width: 288px;
+        margin-top: 10px;
+    }
+
+    .newsletter .image-container img {
+        width:335px;
+        height:300px;
+    }
+
+    .btn-newsletter {
+        top: 56%;
+        left: 11%;
+        border-radius: 10px;
+        width: 214px;
+        height: 80px;  
+    }
+
+    .travel-text {
+        font-size: var(--font-size);
+    }
+    
+    .save-text {
+        font-size: 1.375rem;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+    
+    .footer-content {
+        max-width: 600px;
+        padding: 2% 15% 5% 1%;
+        margin-left: 10px;
+    }
+
+    .footer-container {
+        justify-content: left;
+        margin-left: 70px;
+    }
+    
+    .footer-title {
+        font-size: 1.375rem;
+    }
+    
+    .footer-container img {
+        width: 33px;
+        height: 28px;
+    }
+    
+    .footer-content p {
+        max-width: 85%;
+        margin-left: 10px;
+    }
+    
+    .footer-content hr {
+        margin-top: 30px;
+        margin-left: -10px;
+        width:335px;
+    }
+
+    .footer-text {
+        font-size: .875rem;
+        margin-top: 10px;
+    }
+
 }
