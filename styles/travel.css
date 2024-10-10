@@ -107,6 +107,26 @@ input[type="checkbox"] {
     display: none;
 }
 
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
+.hamburger span {
+    background-color: #333;
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    /* width: 100%; */
+    transition: all 0.3s ease-in-out;
+}
+
 /* banner styles */
 .banner {
     background-image: linear-gradient(180.00deg, rgba(19, 19, 24, 0.8), rgba(19, 19, 24, 0) 100%), url("../Images/Group\ 13.png");
@@ -777,37 +797,17 @@ footer {
         display: none;
     }
 
-    /* Hamburger Icon */
-    .hamburger {
-        display: block;
-        width: 30px;
-        height: 20px;
-        position: relative;
-        cursor: pointer;
-        margin-top: 10px;
-        margin-left: 120px;
-    }
-
-    .hamburger span {
-        background-color: #333;
-        display: block;
-        height: 3px;
-        margin: 5px 0;
-        width: 100%;
-        transition: all 0.3s ease-in-out;
-    }
-
     /* Show hamburger icon */
     .hamburger {
         display: block;
     }
 
     /* When the menu is opened, the dropdown is visible */
-    input[type="checkbox"] {
+    /* input[type="checkbox"] {
         display: none;
-    }
+    } */
 
-    input[type="checkbox"]:checked ~ .nav-menu {
+    input[type="checkbox"]:checked + .nav-menu {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -817,11 +817,11 @@ footer {
         border: 1px solid #ddd;
         border-radius: 10px;
         padding: 10px;
-        width: 200px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        /* width: 200px; */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    /* Make sure each menu item is vertically stacked */
+    /* Menu items stacked vertically */
     .nav-menu li {
         margin: 10px 0;
     }
