@@ -103,6 +103,10 @@ body {
     color: var(--orange-color);
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
 /* banner styles */
 .banner {
     background-image: linear-gradient(180.00deg, rgba(19, 19, 24, 0.8), rgba(19, 19, 24, 0) 100%), url("../Images/Group\ 13.png");
@@ -769,7 +773,7 @@ footer {
     }
 
     /* Hide normal menu */
-    .nav-menu {
+    .nav>ul {
         display: none;
     }
 
@@ -781,7 +785,7 @@ footer {
         position: relative;
         cursor: pointer;
         margin-top: 10px;
-        margin-left: 140px;
+        margin-left: 120px;
     }
 
     .hamburger span {
@@ -833,7 +837,7 @@ footer {
         width: 335px;
         height: 483px;
         margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 7px;
         border-radius: 16px;
     }
 
@@ -898,6 +902,7 @@ footer {
         width: 335px;
         height: 342px;
         border-radius: 16px;
+        margin-left: -12px;
     }
 
     .destination-content {
@@ -920,7 +925,7 @@ footer {
     .destination-images {
         margin-top: 20px;
         justify-content: left;
-        margin-left: 20px;
+        margin-left: 8px;
     }
 
     .row {
@@ -962,6 +967,7 @@ footer {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
+        margin-left: -12px;
         padding: 0px;
         justify-content: left;
         align-items: start;
@@ -997,7 +1003,7 @@ footer {
     .deals-container img {
         width: 335px;
         height: 500px;
-        margin-left: 20px;
+        margin-left: 8px;
     }
 
     .deals-card {
@@ -1112,6 +1118,7 @@ footer {
         height: 200px;
         max-width: 400px;
         flex-basis: 100%; 
+        margin-left: -12px;
     }
 
     .place-text {
@@ -1130,6 +1137,7 @@ footer {
     .newsletter-box {
         width: 335px;
         height: 353px;
+        margin-left: -12px;
         padding: 20px 20px 20px;
     }
 
@@ -1149,11 +1157,12 @@ footer {
     .newsletter .image-container img {
         width:335px;
         height:300px;
+        margin-left: -12px;
     }
 
     .btn-newsletter {
-        top: 56%;
-        left: 11%;
+        top: 58%;
+        left: 9%;
         border-radius: 10px;
         width: 214px;
         height: 80px;  
@@ -1174,7 +1183,7 @@ footer {
     .footer-content {
         max-width: 600px;
         padding: 2% 15% 5% 1%;
-        margin-left: 10px;
+        margin-left: -10px;
     }
 
     .footer-container {
@@ -1192,19 +1201,26 @@ footer {
     }
     
     .footer-content p {
-        max-width: 85%;
-        margin-left: 10px;
+        max-width: 70%;
+        margin-left: 15px;
+    }
+
+    .icon {
+        justify-content: left;
+        margin-left: 80px;
     }
     
     .footer-content hr {
         margin-top: 30px;
-        margin-left: -10px;
+        margin-left: 6px;
         width:335px;
     }
 
     .footer-text {
         font-size: .875rem;
         margin-top: 10px;
+        margin-left: 80px;
+        text-align: left;
     }
 
 }
