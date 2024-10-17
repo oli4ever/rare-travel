@@ -990,6 +990,7 @@ input[type="checkbox"]:checked ~ .nav-menu {
     .deals-content {
         margin-top: 30px;
         text-align: left;
+        margin-left: -20px;
     }
 
     .deals-title {
@@ -1223,6 +1224,60 @@ input[type="checkbox"]:checked ~ .nav-menu {
         margin-top: 10px;
         margin-left: 80px;
         text-align: left;
+    }
+
+    @media screen and (min-width:411px) {
+        .nav {
+            margin: 50px 350px 20px 35px;
+        }
+
+        .banner {
+            margin-left: 30px;
+        }
+
+        .popular {
+            margin-left: 10px;
+        
+    }
+
+    .popular-image img {
+        margin-left: -1px;
+    }
+
+    .image-container > img {
+        margin-left: 20px;
+    }
+
+    .card-container {
+        margin-left: 8px;
+    }
+
+    .deals-content {
+        margin-left: 10px;
+    }
+
+    .image-container {
+        margin-left: 10px;
+    }
+
+    .place-content {
+        margin-left: 20px;
+    }
+
+    .video-container {
+        margin-left: 20px;
+    }
+
+    .newsletter-box {
+        margin-left: 20px;
+    }
+
+    .newsletter .image-container img {
+        margin-left: 7px;
+    }
+
+    .footer-content {
+        margin-left: 20px;
     }
 
 }
