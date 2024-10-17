@@ -1280,4 +1280,61 @@ input[type="checkbox"]:checked ~ .nav-menu {
         margin-left: 20px;
     }
 
+    @media screen and (min-width: 479px) {
+        .nav {
+            margin: 50px 350px 20px 85px;
+        }
+
+        .banner {
+            margin-left: 80px;
+        }
+
+        .popular {
+            margin-left: 60px;
+        }
+
+        .destination-content {
+            margin-left: 60px;
+        }
+
+        .image-container > img {
+            margin-left: 80px;
+        }
+
+        .choose-content {
+            margin-left: 90px;
+        }
+
+        .card-container {
+            margin-left: 60px;
+        }
+
+        .deals-content {
+            margin-left: 60px;
+        }
+
+        .deals-container .image-container>img {
+            margin-left: 80px;
+        }
+
+        .position1, .position2 {
+            position: absolute;
+            top: 35%;
+            left: 22%;
+        }
+
+        .place {
+            margin-left: 60px;
+        }
+
+        .newsletter {
+            margin-left: 60px;
+        }
+
+        .footer-content {
+            margin-left: 70px;
+        }
+    }
+    }
+
 }
