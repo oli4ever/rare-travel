@@ -234,6 +234,7 @@ input[type="checkbox"] {
     white-space: nowrap;
 }
 
+/* popular section styles */
 .travel-title {
     color: var(--primary-color);
     font-family: var(--font-mulish);
@@ -287,6 +288,7 @@ input[type="checkbox"] {
     max-width: 600px;
 }
 
+/* destination section styles */
 .destination-content {
     margin-top: 100px;
     text-align: center;
@@ -347,6 +349,7 @@ input[type="checkbox"] {
     transition: transform 0.3s ease-in-out;
 }
 
+/* choose section styles */
 .choose {
     background: var(--white-color);
     margin-top: 100px;
@@ -395,8 +398,7 @@ input[type="checkbox"] {
     height: 284px;
     border-radius: 16px;
     padding: 30px;
-    box-sizing: border-box;
-    /* Ensure padding doesn't affect size */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
 }
 
 .card1 {
@@ -412,8 +414,7 @@ input[type="checkbox"] {
 .card3 {
     border: 1px solid rgba(233, 68, 68, 0.2);
     background: rgba(233, 68, 68, 0.05);
-    grid-column: span 2;
-    /* Make .card3 span across two columns */
+    grid-column: span 2; /* Make .card3 span across two columns */
     justify-self: center;
 }
 
@@ -436,6 +437,7 @@ input[type="checkbox"] {
     background: rgb(255, 179, 209);
 }
 
+/* deals section styles */
 .deals-content {
     margin-top: 100px;
     text-align: center;
@@ -513,6 +515,7 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
+/* place section styles */
 .place {
     margin-top: 100px;
     display: flex;
@@ -579,6 +582,7 @@ input[type="checkbox"] {
     text-align: center;
 }
 
+/* newsletter section styles */
 .newsletter {
     margin-top: 100px;
     display: flex;
@@ -684,6 +688,7 @@ input[type="checkbox"] {
     margin-top: -10px;
 }
 
+/* footer section styles */
 footer {
     width: 100%;
     margin-top: 120px;
@@ -805,7 +810,7 @@ footer {
         top: 75px;
         /* Adjust based on your header height */
         right: 20px;
-        background-color: #fff;
+        background-color: #aef1e5;
         border: 1px solid #ddd;
         width: 150px;
         border-radius: 10px;
@@ -1305,6 +1310,7 @@ footer {
     }
 }
 
+/* Styles for tablets and small desktops */
 @media screen and (min-width:601px) and (max-width:991px) {
 
     .container {
@@ -1344,7 +1350,7 @@ footer {
         top: 75px;
         /* Adjust based on your header height */
         right: 20px;
-        background-color: #fff;
+        background-color: #aef1e5;
         border: 1px solid #ddd;
         width: 150px;
         border-radius: 10px;
@@ -1844,6 +1850,7 @@ footer {
 
 }
 
+/* Styles for desktops & laptops */
 @media screen and (min-width:992px) and (max-width:1300px) {
     .nav>ul {
         display: none;
