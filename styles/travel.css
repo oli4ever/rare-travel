@@ -807,8 +807,7 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 75px;
-        /* Adjust based on your header height */
+        top: 75px; 
         right: 20px;
         background-color: #aef1e5;
         border: 1px solid #ddd;
@@ -816,8 +815,7 @@ footer {
         border-radius: 10px;
         padding: 10px 30px;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-        z-index: 20;
-        /* Add this to bring the menu to the front */
+        z-index: 20; /* Added this to bring the menu to the front */
     }
 
     /* Show the menu when the checkbox is checked */
@@ -1052,8 +1050,7 @@ footer {
 
     .info .quantity,
     .info .location {
-        grid-column: span 1;
-        /* Two columns in the second row */
+        grid-column: span 1; /* Two columns in the second row */
         margin-top: -20px;
     }
 
@@ -1307,6 +1304,13 @@ footer {
 
         }
 
+        @media screen and (min-width: 570px) {
+            .nav-menu {
+                top: 80px;
+                right: 70px;
+            }
+        }
+
     }
 }
 
@@ -1348,7 +1352,6 @@ footer {
         flex-direction: column;
         position: absolute;
         top: 75px;
-        /* Adjust based on your header height */
         right: 20px;
         background-color: #aef1e5;
         border: 1px solid #ddd;
@@ -1357,7 +1360,6 @@ footer {
         padding: 10px 30px;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         z-index: 20;
-        /* Add this to bring the menu to the front */
     }
 
     /* Show the menu when the checkbox is checked */
@@ -1596,7 +1598,6 @@ footer {
     .info .quantity,
     .info .location {
         grid-column: span 1;
-        /* Two columns in the second row */
         margin-top: -20px;
     }
 
