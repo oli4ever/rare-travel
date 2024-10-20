@@ -1025,7 +1025,7 @@ footer {
     .position2 {
         position: absolute;
         top: 35%;
-        left: 12%;
+        left: 7%;
     }
 
     .image-container {
@@ -1262,6 +1262,13 @@ footer {
         .card-container {
             margin-left: 8px;
         }
+
+        .position1,
+    .position2 {
+        position: absolute;
+        top: 35%;
+        left: 12%;
+    }
 
         .newsletter .image-container img {
             margin-left: 17px;
@@ -2143,5 +2150,5 @@ footer {
             right: 120px;
         }
     }
-    
+
 }
